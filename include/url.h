@@ -15,6 +15,8 @@ public:
         UP_PTR,
         UP_
     }URL_PROTOCOL;
+    /** 资源类型
+     * */
 public:
     URL(const char* url);
     ~URL();
