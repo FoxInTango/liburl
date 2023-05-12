@@ -1,8 +1,7 @@
-CC=clang
-AS=llvm-as
-AR=llvm-ar
-LD=clang
-CP=llvm-objcopy
+CC=g++
+AS=as
+AR=ar
+LD=ld
 
 PLATFORM_ARCH         = $(shell uname -s)
 PLATFORM_ARCH_LINUX   = Linux
@@ -74,6 +73,11 @@ TARGET_LIB_FLAG =
 ASFLAGS =
 CCFLAGS = -c -Wall -fvisibility=hidden  #-I${TARGET_HEADER_DIRS}
 PPFLAGS = -c -Wall -fvisibility=hidden -std=c++11
+
+ifdef SUPER_INCLUDE_PATH
+    CCFLAGS += -I${SUPER_INCLUDE_PATH}
+	PPFLAGS += -I${SUPER_INCLUDE_PATH}
+endif
 # 平台检测 -- DARWIN
 ifeq (${PLATFORM_ARCH},${PLATFORM_ARCH_DARWIN})
     TARGET_BIN_EXT         :=

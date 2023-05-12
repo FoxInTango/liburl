@@ -1,24 +1,31 @@
 #ifndef _URL_H_foxintango
 #define _URL_H_foxintango
 
+#include <libstring/libstring.h>
 #include <libcpp/libcpp.h>
 
 EXTERN_C_BEGIN
 namespaceBegin(foxintango)
 
 class foxintangoAPI URL {
+
 public:
     /** 定位符类型
      *  
      * */
-    typedef enum _URL_PROTOCOL {
-        UP_PTR,
-        UP_
-    }URL_PROTOCOL;
+    enum URL_PROTOCOL {
+        FS,
+        IP,
+        HTTP,
+        HTTPS,
+        WS,
+        WSS
+    };
     /** 资源类型
      * */
 public:
-    URL(const char* url);
+    URL();
+    URL(const String& url);
     ~URL();
 };
 
