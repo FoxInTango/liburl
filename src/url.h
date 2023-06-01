@@ -27,6 +27,8 @@ public:
     URL();
     URL(const String& url);
     ~URL();
+public:
+    const String& string();
 };
 
 namespaceEnd
