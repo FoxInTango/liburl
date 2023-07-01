@@ -60,9 +60,14 @@ public:
     /** 资源类型
      * */
 public:
-    URL();
     URL(const String& url);
     ~URL();
+public:
+    URL& operator = (const URL& url);
+    URL& operator = (const String& url);
+public:
+    bool& operator == (const URL& url);
+    bool& operator == (const String& url);
 public:
     operator String();
 };

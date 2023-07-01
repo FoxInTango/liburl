@@ -20,15 +20,29 @@ URLParams::operator foxintango::String(){
     return String();
 }
 
-
-
-URL::URL(){
-}
-
 URL::URL(const String& url) {
+    if(url.length()){
+        
+    }
 }
 
 URL::~URL(){
+}
+
+URL& URL::operator = (const URL& url){
+
+}
+
+URL& URL::operator = (const String& url){
+
+}
+
+bool& URL::operator == (const URL& url){
+
+}
+
+bool& URL::operator == (const String& url){
+
 }
 
 URL::operator foxintango::String(){
