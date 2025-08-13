@@ -3,6 +3,8 @@
 
 #include <libstring/libstring.h>
 #include <libcpp/libcpp.h>
+#include <map>
+#include <vector>
 
 EXTERN_C_BEGIN
 namespaceBegin(foxintango)
@@ -21,7 +23,7 @@ public:
 
 class foxintangoAPI URLPath{
 public:
-    Array<String> nodes;
+    std::vector<String> nodes;
 public:
     URLPath();
     URLPath(const String& path);
@@ -32,7 +34,7 @@ public:
 
 class foxintangoAPI URLParams{
 public:
-    Map<String,String> params;
+    std::map<String,String> params;
 public:
     URLParams();
     ~URLParams();
